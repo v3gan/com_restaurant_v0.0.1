@@ -52,6 +52,11 @@ class RestaurantViewrestaurants extends JViewLegacy
 		$this->addToolbar();
         
         /*
+         * the sidbar will not show without this
+         */
+        $this->sidebar = JHtmlSidebar::render();
+        
+        /*
          * show the view
          */
 		parent::display($tpl);
@@ -118,6 +123,12 @@ class RestaurantViewrestaurants extends JViewLegacy
 		{
 			JToolbarHelper::preferences('com_restaurant');
 		}
+        
+        JHtmlSidebar::setAction('index.php?option=com_restaurant&view=restaurants');
+        
+        JHtmlSidebar::addFilter(JText::_('JOPTION_SELECT_PUBLISHED'), 'filter.state', 
+            JHtml::_('select.options',JHtml::_('jgrid.publishedOptions'),
+                'value','text',$this->state->get('filter.state'),true));
 	}
 protected function getSortFields()
 {
