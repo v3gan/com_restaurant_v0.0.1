@@ -1,0 +1,12 @@
+SET foreign_key_checks = 0;
+DROP TABLE IF EXISTS `#__rl_contact`;
+DROP TABLE IF EXISTS `#__rl_contact_role_location`;
+DROP TABLE IF EXISTS `#__rl_location`;
+DROP TABLE IF EXISTS `#__rl_neighborhood`;
+DROP TABLE IF EXISTS `#__rl_restaurant`;
+DROP TABLE IF EXISTS `#__rl_restaurant_contact`;
+DROP TABLE IF EXISTS `#__rl_restaurant_location`;
+DROP TABLE IF EXISTS `#__rl_role`;
+DROP TABLE IF EXISTS `#__rl_v_restaurant_list`;
+DROP VIEW IF EXISTS `#__rl_v_restaurant_list`;
+SET foreign_key_checks = 1;

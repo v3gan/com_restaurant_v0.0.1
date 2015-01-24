@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <!--field definition for each field in database-->
+	<fieldset>
+		<field 
+		    name="id" 
+		    type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+		
+		<field 
+		    name="restaurant" 
+		    type="text" 
+		    class="inputbox"
+			size="40" 
+			label="COM_RESTAURANT_FIELD_RESTAURANT_LABEL"
+			description="COM_RESTAURANT_FIELD_RESTAURANT_DESC" 
+			required="true" />
+
+		<field 
+		    name="alias" 
+		    type="text"
+		    class="inputbox"
+		    size="40"
+		    label="JFIELD_ALIAS_LABEL" 
+			description="COM_RESTAURANT_FIELD_ALIAS_DESC" />
+			
+		<!--category dropdown list of categories for this component-->
+		<field 
+		    name = "catid"
+		    type = "category"
+		    extension = "com_folio"
+		    class = "inputbox"
+		    default = ""
+		    label = "COM_RESTAURANT_FIELD_CATID_LABEL"
+		    description="COM_RESTAURANT_FIELD_CATID_DESC">
+		      <option value="0">JOPTION_SELECT_CATEGORY</option>
+        </field>
+            
+        <field 
+            name="pub_state" 
+            type="list"
+            class="inputbox small" 
+            size="1" 
+            default="1"
+            label="JSTATUS" 
+            description="JFIELD_PUBLISHED_DESC"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        
+        <field 
+            name="neighborhood_id" 
+            type="NeighborhoodList"
+            class="inputbox small" 
+            label="COM_RESTAURANT_FIELD_NEIGHBORHOOD_LABEL"
+            description="COM_RESTAURANT_FIELD_NEIGHBORHOOD_DESC" />
+            
+        <field 
+            name="blurb" 
+            type="textarea" 
+            class="inputbox"
+            rows="3" 
+            cols="30" 
+            label="COM_RESTAURANT_FIELD_BLURB_LABEL"
+            description="COM_RESTAURANT_FIELD_BLURB_DESC" />
+            
+        <field 
+            name="address1" 
+            type="text"
+            class="inputbox"
+            size="80"
+            label="COM_RESTAURANT_FIELD_ADDRESS1_LABEL" 
+            description="COM_RESTAURANT_FIELD_ADDRESS1_DESC" />
+
+        <field 
+            name="address2" 
+            type="text"
+            class="inputbox"
+            size="80"
+            label="COM_RESTAURANT_FIELD_ADDRESS2_LABEL" 
+            description="COM_RESTAURANT_FIELD_ADDRESS2_DESC" />
+            
+        <field 
+            name="city" 
+            type="text"
+            class="inputbox"
+            size="80"
+            default="Pittsburgh"
+            label="COM_RESTAURANT_FIELD_CITY_LABEL" 
+            description="COM_RESTAURANT_FIELD_CITY_DESC" />
+            
+        <field 
+            name="state" 
+            type="text"
+            class="inputbox"
+            size="2"
+            default="PA"
+            label="COM_RESTAURANT_FIELD_STATE_LABEL" 
+            description="COM_RESTAURANT_FIELD_STATE_DESC" />
+
+        <field 
+            name="zip" 
+            type="text"
+            class="inputbox"
+            size="10"
+            label="COM_RESTAURANT_FIELD_ZIP_LABEL" 
+            description="COM_RESTAURANT_FIELD_ZIP_DESC" />
+
+        <field 
+            name="display_logo" 
+            type="radio" 
+            default="0" 
+            label="COM_RESTAURANT_FIELD_DISPLAY_LOGO_LABEL" 
+            description="COM_RESTAURANT_FIELD_DISPLAY_LOGO_LABEL">
+            <option value="0">COM_RESTAURANT_FIELD_OPTION_NO</option>
+            <option value="1">COM_RESTAURANT_FIELD_OPTION_YES</option>
+        </field>
+
+        <field 
+            name="website" 
+            type="text"
+            description="COM_RESTAURANT_FIELD_WEBSITE_DESC"
+            label="COM_RESTAURANT_FIELD_WEBSITE_LABEL"
+            size="80"
+            maxlength="1000"
+            />
+
+        <field 
+            name="phone" 
+            type="tel"
+            id="phone"
+            filter="string"
+            size="30"
+            validate="tel"
+            label="COM_RESTAURANT_FIELD_PHONE_LABEL" 
+            description="COM_RESTAURANT_FIELD_PHONE_DESC" /> 
+
+        <field 
+            name="fax" 
+            type="tel"
+            id="phone"
+            filter="string"
+            size="30"
+            validate="tel"
+            label="COM_RESTAURANT_FIELD_FAX_LABEL" 
+            description="COM_RESTAURANT_FIELD_FAX_DESC" />                           
+	</fieldset>
+</form>

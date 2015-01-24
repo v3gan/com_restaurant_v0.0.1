@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_restaurant</name>
+	<author>Marc Bowman</author>
+	<creationDate>2015.01.09</creationDate>
+	<copyright>(C) Vegan Pittsurugh
+	</copyright>
+	<license>GNU General Public License version 2 or later; see
+		LICENSE.txt</license>
+	<authorEmail>mab@mbwmn.com</authorEmail>
+	<authorUrl>www.mbwmn.com</authorUrl>
+	<version>0.0.1</version>
+	<description>COM_RESTAURANT_XML_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<install folder="admin">
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+ 	<update> <!-- Runs on update; New in 2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<files folder="site">
+		<filename>index.html</filename>
+	</files>	
+	<administration>
+		<menu img="class:categories">COM_RESTAURANT_MENU</menu>
+		
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>restaurant.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+ 
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_restaurant.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_restaurant.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
