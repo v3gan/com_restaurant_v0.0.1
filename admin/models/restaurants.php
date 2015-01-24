@@ -59,6 +59,12 @@ class RestaurantModelRestaurants extends JModelList
      */
     protected function populateState($ordering=null, $direction = null)
     {
+        /*
+         * find out which option of the 'status' filter is selected, and assign it 
+         * to a variable for use in the query below
+         */
+        $published = $this->getUserStateFromRequest($this->context.'.filter.state','filter.state','','string');
+        $this->setState('filter.state',$published);
         parent::populateState('r.ordering', 'asc');
     }
 
@@ -95,6 +101,15 @@ class RestaurantModelRestaurants extends JModelList
 		$query->from($db->quoteName('#__rl_disp_restaurant_list','r'));
         $query->join('LEFT',$db->quoteName('#__rl_neighborhood','n').
         ' ON ('.$db->quoteName('r.neighborhood_id').' = '.$db->quoteName('n.id').')');    
+        
+        $published = $this->getState('filter.state');
+        if (is_numeric($published))
+        {
+            $query->where('r.pub_state = '.(int)$published);
+        } elseif ($published === '')
+        {
+            $query->where('(r.pub_state IN (0,1))');
+        }
         
         /*
          * get the order and direction from the model state
