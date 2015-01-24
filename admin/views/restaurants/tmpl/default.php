@@ -19,7 +19,7 @@ if ($saveOrder)
 {
     $saveOrderingUrl = 'index.php?option=com_restaurant&task=restaurants.saveOrderAjax&tmpl=component';
     // note that restauratnList = id of the table and adminForm = id of the enclosing form
-    JHtml::_('sortablelist.sortable','restaurantList','adminForm',strtolower($listDirn),saveOrderingUrl);
+    JHtml::_('sortablelist.sortable','restaurantList','adminForm',strtolower($listDirn),$saveOrderingUrl);
 }
 $sortFields = $this->getSortFields();
 ?>
