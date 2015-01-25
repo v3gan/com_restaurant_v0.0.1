@@ -63,7 +63,7 @@ class RestaurantModelRestaurants extends JModelList
          * find out which option of the 'status' filter is selected, and assign it 
          * to a variable for use in the query below
          */
-        $published = $this->getUserStateFromRequest($this->context.'.filter.state','filter.state','','string');
+        $published = $this->getUserStateFromRequest($this->context.'.filter.state','filter_state','','string');
         $this->setState('filter.state',$published);
         parent::populateState('r.ordering', 'asc');
     }

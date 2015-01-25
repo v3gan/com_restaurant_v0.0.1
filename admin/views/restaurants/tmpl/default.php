@@ -39,6 +39,9 @@ $sortFields = $this->getSortFields();
     }
 </script>
 <form action="<?php echo JRoute::_('index.php?option=com_restaurant&view=restaurants'); ?>" method="post" name="adminForm" id="adminForm">
+    <!-- 
+        show the sidebar if it's not empty
+    -->
     <?php if(!empty($this->sidebar)) : ?>
         <div id="j-sidebar-container", class="span2">
             <?php echo $this->sidebar; ?>
@@ -47,6 +50,7 @@ $sortFields = $this->getSortFields();
 	<?php else : ?>
 	   <div id="j-main-container">
 	<?php endif; ?>
+	
 	   <div class="clearfix"> </div>
 		<table class="table table-striped" id="restaurantList">
 			<thead>
