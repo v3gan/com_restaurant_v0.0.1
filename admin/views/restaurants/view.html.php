@@ -80,6 +80,8 @@ class RestaurantViewrestaurants extends JViewLegacy
          */
 		$bar = JToolBar::getInstance('toolbar');
         
+        $state = $this->get('State');
+        
         /*
          * title is the text shown at the top of the view
          * uses JText() to display a language string
@@ -110,9 +112,12 @@ class RestaurantViewrestaurants extends JViewLegacy
             JToolbarHelper::checkin('restaurants.checkin'); 
         }
         
-        if($canDo->get('core.delete'))
+        if($state->get('filter.state') == -2 && $canDo->get('core.delete'))
         {
-            JToolbarHelper::deleteList('','folios.delete','JTOOLBAR_DELETE');    
+            JToolbarHelper::deleteList('','folios.delete','JTOOLBAR_EMPTY_TRASH');    
+        }elseif ($canDo->get('core.edit.state'))
+        {
+            JToolBarHelper::trash('restaurants.trash');
         }
         
         /*
