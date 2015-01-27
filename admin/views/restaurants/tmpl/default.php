@@ -70,10 +70,37 @@ $sortFields = $this->getSortFields();
             </button>
 	    </div>
 	    <div class="btn-group pull-right hidden-phone">
-	        <!--ordering direction-->
+	        <label for="directionTable" class="element-invisible">
+	            <?php echo JText::_('JFIELD_ORDERING_DESC'); ?>
+	        </label>
+	        <select name="directionTable" id="directionTable" class="input-medium" onchange="Joomla!.orderTable()">
+	            <option value="">
+	                <?php echo JText::_('JFIELD_ORDERING_DESC'); ?>
+	            </option>
+	            <option value="asc" <?php if($listDirn=='asc') echo 'selected = "selected"'; ?>>
+	                <?php echo JText::_('JGLOBAL_ORDER_ASCENDING'); ?>
+	            </option>
+	            <option value="desc" <?php if($listDirn=='desc') echo 'selected = "selected"'; ?>>
+                    <?php echo JText::_('JGLOBAL_ORDER_DESCENDING'); ?>
+                </option>
+	        </select>
 	    </div>
 	    <div class="btn-group pull-right hidden-phone">
-            <!--ordering sort by-->
+            <label for="sortTable" class="element-invisible">
+                <?php echo JText::_('JGLOBAL_SORT_BY') ?>
+             </label>
+             <select name="sortTable" id="sortTable" class="input-medium" onchange="Joomla!.orderTable()">
+                <option value="">
+                    <?php JText::_('JGLOBAL_SORT_BY'); ?>
+                </option> 
+                <!-- 
+                   the JHtml method 'select.options' generates options based on the 
+                   associative array $sortFields. 'value' and 'text' are the default values
+                   of the methods optKey and optText parameters respectively. 
+                   $listOrder is the selected item    
+                -->   
+                <?php echo JHtml::_('select.options',$sortFields,'value','text',$listOrder); ?>
+             </select>
         </div>
 	</div>
 	   <div class="clearfix"> </div>
