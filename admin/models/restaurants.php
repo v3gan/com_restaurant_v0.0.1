@@ -65,6 +65,8 @@ class RestaurantModelRestaurants extends JModelList
          */
         $published = $this->getUserStateFromRequest($this->context.'.filter.state','filter_state','','string');
         $this->setState('filter.state',$published);
+        $search=$this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
+        $this->setState('filter.search',$search)
         parent::populateState('r.ordering', 'asc');
     }
 
