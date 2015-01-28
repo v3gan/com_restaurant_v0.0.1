@@ -66,7 +66,7 @@ class RestaurantModelRestaurants extends JModelList
         $published = $this->getUserStateFromRequest($this->context.'.filter.state','filter_state','','string');
         $this->setState('filter.state',$published);
         $search=$this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
-        $this->setState('filter.search',$search)
+        $this->setState('filter.search',$search);
         parent::populateState('r.ordering', 'asc');
     }
 
@@ -113,6 +113,16 @@ class RestaurantModelRestaurants extends JModelList
             $query->where('(r.pub_state IN (0,1))');
         }
         
+        //  filter by search in restaurant
+        $search = $this->getState('filter.search');
+        if (!empty($search)) {            
+            if (stripos($search, 'id:')===0) {
+                $query->where('r.id='.(int)substr($search, 3));
+            }else {
+                $search =  $db->quote('%'.$db->escape($search,TRUE).'%');
+                $query->where('(r.restaurant like '.$search.' or r.blurb like '.$search.')');
+            }
+        }
         /*
          * get the order and direction from the model state
          */
