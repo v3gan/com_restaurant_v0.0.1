@@ -55,10 +55,10 @@ $sortFields = $this->getSortFields();
 	        <label for="filter-search" class="element-invisible">
 	            <?php echo JText::_('COM_RESTAURANT_SEARCH_IN_RESTAURANT'); ?>
 	        </label>
-	        <input type="text" name="filter_search" id="filter-search" 
-	           placeholder="<?php echo JText::_('COM_RESTUARANT_SEARCH_IN_RESTAURANT'); ?>"
+	        <input type="text" name="filter_search" id="filter_search" 
+	           placeholder="<?php echo JText::_('COM_RESTAURANT_SEARCH_IN_RESTAURANT'); ?>"
 	           value="<?php echo $this->escape($this->state->get('filter.search')); ?>" 
-	           title="<?php echo JText::_('COM_RESTUARANT_SEARCH_IN_RESTAURANT'); ?>" />
+	           title="<?php echo JText::_('COM_RESTAURANT_SEARCH_IN_RESTAURANT'); ?>" />
 	    </div>
 	    <div class="btn-group pull-left">
 	        <button class="btn hasTooltip" type="submit" title="<?php echo JText::_('JSEARCH_FILTER_SUBMIT'); ?>">
