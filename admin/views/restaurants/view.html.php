@@ -41,6 +41,8 @@ class RestaurantViewrestaurants extends JViewLegacy
          */
         $this->state = $this->get('State');
         
+        $this->pagination = $this->get('Pagination');
+        
         /*
          * error checking in case something goes wrong with the database query
          */
