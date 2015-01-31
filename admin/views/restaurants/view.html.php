@@ -22,6 +22,7 @@ class RestaurantViewrestaurants extends JViewLegacy
      * variable to store the column and direction of the sort
      */    
     protected $state;
+    protected $pagination;
     
     /*
      * called by default whenever the view is displayed
