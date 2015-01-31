@@ -22,6 +22,9 @@ class RestaurantViewrestaurants extends JViewLegacy
      * variable to store the column and direction of the sort
      */    
     protected $state;
+    /*
+     * Method to get a JPagination object for the data set.
+     */
     protected $pagination;
     
     /*
