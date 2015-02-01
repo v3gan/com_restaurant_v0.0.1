@@ -33,7 +33,7 @@ class RestaurantHelper
 	}
     /*
      * creates a link to the default view (restaurants) and 
-     * to the categories view
+     * to the categories view (just a list of user defined categories)
      */
     public static function addSubmenu($vName='restaurants')
     {
