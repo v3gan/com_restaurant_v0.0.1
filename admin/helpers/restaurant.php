@@ -31,4 +31,22 @@ class RestaurantHelper
 
 		return $result;
 	}
+    /*
+     * creates a link to the default view (restaurants) and 
+     * to the categories view
+     */
+    public static function addSubmenu($vName='restaurants')
+    {
+        JHtmlSidebar::addEntry(JText::_('COM_RESTAURANT_SUBMENU_RESTAURANTS'),
+            'index.php?option=com_restaurant&view=restaurants',$vName=='restaurants');
+        JHtmlSidebar::addEntry(JText::_('COM_RESTAURANT_SUBMENU_CATEGORIES'),
+            'index.php?option=com_categories&extension=com_restaurant',$vName=='categories');
+        
+        if($vName=='categories')
+        {
+            JToolbarHelper::title(JText::sprintf('COM_CATEGORIES_CATEGORIES_TITLE',
+                JText::_('com_restaurant')),'restaurants-categories');
+        }
+    }
+    
 }
