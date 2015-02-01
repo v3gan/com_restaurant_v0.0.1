@@ -46,6 +46,8 @@ class RestaurantViewrestaurants extends JViewLegacy
         
         $this->pagination = $this->get('Pagination');
         
+        RestaurantHelper::addSubmenu('restaurants');
+        
         /*
          * error checking in case something goes wrong with the database query
          */
