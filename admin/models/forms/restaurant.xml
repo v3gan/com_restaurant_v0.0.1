@@ -31,7 +31,7 @@
 		<field 
 		    name = "catid"
 		    type = "category"
-		    extension = "com_folio"
+		    extension = "com_restaurant"
 		    class = "inputbox"
 		    default = ""
 		    label = "COM_RESTAURANT_FIELD_CATID_LABEL"
