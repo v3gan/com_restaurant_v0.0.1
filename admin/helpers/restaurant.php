@@ -47,6 +47,9 @@ class RestaurantHelper
             JToolbarHelper::title(JText::sprintf('COM_CATEGORIES_CATEGORIES_TITLE',
                 JText::_('com_restaurant')),'restaurants-categories');
         }
+        
+        JHtmlSidebar::addEntry(JText::_('COM_FOLIO_SUBMENU_PREVIEW'),
+            'index.php?option=com_folio&view=preview',$vName=='preview');
     }
     
 }
