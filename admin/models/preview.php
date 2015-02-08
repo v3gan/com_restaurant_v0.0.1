@@ -20,6 +20,10 @@ class RestaurantModelPreview extends JModelList
                 ,'r.pub_state'
                 ,'neighborhood_id'
                 ,'r.neighborhood_id'
+                ,'hex_background'
+                ,'r.hex_background'
+                ,'hex_text'
+                ,'r.hex_text'
                 ,'name'
                 ,'n.name'
                 ,'address1'
@@ -75,7 +79,7 @@ class RestaurantModelPreview extends JModelList
         $query->select(
             $this->getState(
                 'list.select',
-                'r.id, r.restaurant,'.
+                'r.id, r.restaurant,r.hex_background,r.hex_text,'.
                 'r.pub_state,n.name,r.address1,'.
                 'r.address2,r.city,r.state,r.zip,r.phone,'.                
                 'r.fax,r.display_logo,r.website,r.blurb,'.
@@ -91,7 +95,7 @@ class RestaurantModelPreview extends JModelList
         
         $query->where('(r.pub_state IN (0,1))');
         
-        //$query->order($db->escape($orderCol.' '.$orderDirn));                                                                                                          
+        $query->order($db->escape('r.neighborhood_sort_order asc, r.restaurant asc'));                                                                                                  
 
         return $query;
        }
