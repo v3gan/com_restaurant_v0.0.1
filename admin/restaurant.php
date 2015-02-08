@@ -11,6 +11,13 @@ if (!JFactory::getUser()->authorise('core.manage', 'com_restaurant'))
     return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 
+/*
+ * get the stylesheet for the component
+ */
+$document = JFactory::getDocument();
+$cssFile = "./media/com_restaurant/css/site.stylesheet.css";
+$document->addStylesheet($cssFile);
+
 //  Get an instance of the controller prefixed by Restaurant
 //  the arguement to JControllerLegacy::getInstance is the name of the component
 //  and will prefix all of the classes
