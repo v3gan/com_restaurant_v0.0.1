@@ -1,0 +1,60 @@
+/* -------------------------------------------------------------
+	
+	Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+  	
+	http://www.gnu.org/licenses/gpl.html
+  
+	IceTheme - http://wwww.icetheme.com
+  
+---------------------------------------------------------------- */
+
+/* joomla.css */
+#search form .btn {
+	background:#2190c4;}
+	
+#search form .btn:hover {	
+	background:#6EC5E2;}
+
+
+/* template.css */
+#header {
+	background: #44B5DA;}
+
+#marketing {
+	background-color:#44B5DA;
+	background: -webkit-linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+	background: -moz-linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+	background: -o-linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+	background: linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);}
+
+#marketing .btn {
+	background:#2190c4;}
+	
+#marketing .btn:hover {
+	background:#6EC5E2;}
+	
+
+#columns .moduletable,
+#columns .moduletablestyle1,
+#columns .moduletablestyle2 {
+	background:#44B5DA;}
+
+#columns .moduletablestyle1 {
+	background:#5990DE;}
+
+#columns .moduletablestyle2 {
+	background:#FCA165;}	
+	
+	
+/* icemegamenu.css */
+.icemegamenu > ul > li:hover,
+.icemegamenu > ul > li.active {
+	background:#2190c4}	
+
+ul.icesubMenu {
+    background: #2190c4;}
+
+.ice-megamenu-toggle a {
+    background-image: url(../../images/styles/style1/mobile_menu_btn.png);}
+	
+	

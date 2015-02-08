@@ -1,0 +1,135 @@
+/* -------------------------------------------------------------
+	
+	Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+  	
+	http://www.gnu.org/licenses/gpl.html
+  
+	IceTheme - http://wwww.icetheme.com
+  
+---------------------------------------------------------------- */
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	
+}
+
+
+
+@media (max-width: 1200px) {
+	
+	#search {
+		margin: 12px 0 14px;
+		clear: both;}	
+
+	.breadcrumb {
+		margin-top:2px}
+
+
+}
+
+
+	
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) {
+
+
+#marketing .container {
+	background-image:none}	
+
+#footer {
+	text-align:center}	
+	
+	#ice_social {
+		float: left;
+		padding: 12px 0 0;
+		margin-left:-10px;}
+	
+	#footer #footermods {
+		text-align:left}		
+		
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+.moduletabletestimonial  {
+	border-top:1px solid #fff;
+	box-shadow:0 -1px 0 #ccc;
+	padding-top:40px;
+	border-left:none;}
+	
+#header,
+#marketing {
+	margin-left:-20px;
+	padding-left:20px;
+	margin-right:-20px;
+	padding-right:20px;}
+
+#header {
+	margin-top:25px;
+	margin-bottom:25px;}
+	
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+.container {
+	min-width:240px}
+
+
+#header {
+	margin-bottom:10px;
+	text-align:center;}
+	
+	#header #logo {
+		width:80%;
+		height:80%;
+		padding-left:0;
+		padding-right:0;
+		float:none}
+		
+	
+	.ice-megamenu-toggle a {
+		right:-8px!important}		
+
+	
+#footer {}
+	
+	#footer p#icelogo {
+		float: none;
+		line-height: 25px;
+		padding-right: 0}
+	
+	#footer p#copyright {
+		float: none;
+		padding-right: 0;}
+		
+	#footer #copyrightmenu {
+		float:none;
+		line-height: 25px;}
+		
+	#ice_social {
+		clear:both;
+		float:none;}
+			
+	#ice_social #social_fb,
+	#ice_social #social_tw {
+		float:none;}	
+	
+	
+	.scrollup {
+		-webkit-transform:scale(.75);
+		-moz-transform: scale(.75);
+		-o-transform: scale(.75);
+		-ms-transform: scale(.75);
+		transform: scale(.75);
+		bottom:15px;
+		left:42%;
+		display: block!important;
+		position:relative!important;}
+	
+}

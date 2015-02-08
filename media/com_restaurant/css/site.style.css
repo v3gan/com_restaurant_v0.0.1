@@ -1,0 +1,54 @@
+.restaurant-name
+{
+  font-weight:bold;
+}
+
+.display-logo
+{
+  background-image:url("images/custom/vegan_friendly_logo_only_transparent_small.png");
+  background-repeat:no-repeat;
+  background-position:left top;
+  padding-left:30px;
+}
+
+.restaurant-name img
+{
+  vertical-align:middle;
+  margin:0 .5em 1px 0;
+}
+  
+.bottom-dotted
+  {
+    border-bottom:1px dotted black;
+  }
+.neighborhood, .neighborhood-dark, .neighborhood-light
+{
+  font-weight: bold; 
+  font-size:18px;
+}
+ 
+ a.neighborhood-dark, a.neighborhood-dark:link, a.neighborhood-dark:visited, a.neighborhood-dark:active
+{
+    color:#000000;
+    text-decoration:none;
+}
+
+a.neighborhood-dark:hover
+  {
+    color:#CDFF37;
+    text-decoration:none;
+  }
+ 
+a.neighborhood-light, a.neighborhood-light:link, a.neighborhood-light:visited, a.neighborhood-light:active
+{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+a.neighborhood-light:hover
+  {
+    color:#CDFF37;
+    text-decoration:none;
+ }
+
+ 

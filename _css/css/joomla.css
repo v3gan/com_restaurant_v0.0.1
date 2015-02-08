@@ -1,0 +1,311 @@
+/* -------------------------------------------------------------
+	
+	Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+  	
+	http://www.gnu.org/licenses/gpl.html
+  
+	IceTheme - http://wwww.icetheme.com
+  
+---------------------------------------------------------------- */
+
+
+/* Featured Blog */
+.blog-featured {}
+	
+	.blog-featured .leading {
+		margin-bottom:40px;}
+		
+	.blog-featured .items-row h2 {
+		font-size:24px;
+		line-height: 40px;}
+
+
+
+.page-header {
+	padding:0;
+	margin:0;
+	border-bottom:none}
+
+.blog-featured .btn-group,
+.item-page .btn-group {
+	margin-top:8px}
+
+	
+small.createdby {
+	color: #999;
+	display: inline-block;
+	margin-bottom: 18px;}
+
+.pager {
+	clear:both;
+	padding-top:15px;}	
+
+.items-row {
+	padding-bottom:30px;}
+.items-row h2 {
+	font-size:20px;
+	line-height:32px;}
+.items-row img{
+	padding-bottom:15px;
+	padding-right:15px;}
+
+
+/* Article Page */		
+div.article-info,
+div.article-info dl {
+	display:inline-block;}	
+	
+	div.article-info dl {
+		font-size: 85%;
+		margin-top:0;
+		margin-bottom:18px;
+		padding-left:0}
+		
+	.article-info dt.article-info-term {
+		display:none}
+	
+		.article-info dd {
+			margin-left:0;
+			margin-right:18px;
+			display:inline}	
+				
+				.article-info dd div {
+					display:inline}
+
+					
+
+/* Category list */
+.cat-items {}
+	
+	.cat-items .filters {
+		margin-bottom:20px;}
+		.cat-items .filters label {
+			padding-right:10px;
+			vertical-align: middle;}
+
+	.cat-items ul.category {
+		padding:0;
+		margin:0;
+		list-style-type:none}
+		
+		.cat-items ul.category li {
+			border-bottom:1px solid #ccc;
+			box-shadow:0 1px 0 #fff;
+			padding:8px 0; }
+			
+		.cat-items ul.category li small {
+			color:#888}
+			
+			.cat-items ul.category li span.list-hits {
+				margin-top:11px}
+
+	
+	span.list-edit {
+	margin-right:10px}
+	
+	.cat-items .btn {
+		margin-top:20px;}
+					
+
+/* Pagination */
+.pagination {
+	height: 36px;
+	margin: 18px 0;
+}
+.pagination ul {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-left: 0;
+	margin-bottom: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.pagination li {
+	display: inline;
+}
+.pagination a,
+.pagination span {
+	float: left;
+	padding: 0 14px;
+	line-height: 34px;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-left-width: 0;
+}
+.pagination a:hover,
+.pagination .active a,
+.pagination .active span {
+	background-color: #f5f5f5;
+}
+.pagination .active a,
+.pagination .active span {
+	color: #999;
+	cursor: default;
+}
+.pagination .disabled span,
+.pagination .disabled a,
+.pagination .disabled a:hover {
+	color: #999;
+	background-color: transparent;
+	cursor: default;
+}
+.pagination li:first-child a,
+.pagination li:first-child span {
+	border-left-width: 1px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child a,
+.pagination li:last-child span {
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+.pagination-centered {
+	text-align: center;
+}
+.pagination-right {
+	text-align: right;
+}
+		
+
+/* Smart Search */
+#search {
+	float:right;
+	margin:9px 0 0}
+	
+	#search label,
+	#search br {
+		display:none}
+
+	#search form {
+		margin:0}
+			
+		#search form input.search-query {
+			border-radius:0;
+			padding:3px 8px;
+			border:none;
+			color:#999;
+			box-shadow:none;
+			width:150px;}
+			
+			#search form input.search-query:focus {
+				color:#555}
+							
+		
+		#search form .btn {
+			background:#2190c4;
+			border:none;
+			box-shadow:none;
+			border-radius:0;
+			padding: 3px 9px;
+			margin-left: -4px;
+			-webkit-transition:all .2s ease-out;
+			-moz-transition:all .2s ease-out;
+			-o-transition:all .2s ease-out; 
+			transition:all .2s ease-out;} 
+			
+			#search form .btn:hover {
+				background:#6EC5E2;}
+			
+		
+		
+		
+		
+		
+
+/* Breadcrumbs */
+.breadcrumb {
+	border-top:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	border-radius:0;
+	padding:6px 15px;
+	margin:-10px 0 15px;
+	-webkit-transition:all .2s ease-out;
+	-moz-transition:all .2s ease-out;
+	-o-transition:all .2s ease-out; 
+	transition:all .2s ease-out;} 
+	
+	.breadcrumb:hover {
+		background:#fff;}
+	
+	.breadcrumb .divider {
+		padding:0 8px}
+		
+
+/* Tooltips */
+div.tip-wrap { 
+	padding:10px ;
+	margin-bottom: 2em;
+	font-weight:normal;
+	background: #222;
+	border:1px solid #333;
+	font-size:.9em;
+	color:#ccc;}
+	
+	.tip .tip-title {
+		color: #fff;
+		font-weight:normal;
+		padding-bottom:3px;
+		font-size:1.5em}
+		
+		.tip a {
+			color:#408EDA}
+ 
+ 
+/* Column menu */
+
+#columns ul.nav {}	
+	
+	#columns ul.nav {}	
+		
+		#columns ul.nav li {
+			float:none}					
+	
+	
+	
+/* Login Module */
+
+form#login-form .element-invisible {
+	display:none}
+	
+form#login-form  .input-small {
+	width:140px;}
+	
+form#login-form div#form-login-remember {
+	margin-bottom:16px;}
+	
+form#login-form div#form-login-submit {
+	margin-bottom:20px;}
+	
+	form#login-form ul.unstyled {}
+		
+		form#login-form ul.unstyled li {}
+			
+			form#login-form ul.unstyled li a {
+				color:yellow}
+	
+	
+	
+/* Latest News mod */
+ul.latestnews,
+ul.latestnewsstyle1,
+ul.latestnewsstyle2 {}
+	
+	ul.latestnews li,
+	ul.latestnewsstyle1 li,
+	ul.latestnewsstyle2 li {
+		margin:10px 0}
+		
+		ul.latestnews li a,
+		ul.latestnewsstyle1 li a,
+		ul.latestnewsstyle2 li a {
+			color:#fff}
+					

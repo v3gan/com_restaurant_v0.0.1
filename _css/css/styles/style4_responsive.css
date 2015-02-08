@@ -1,0 +1,25 @@
+/* -------------------------------------------------------------
+	
+	Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+  	
+	http://www.gnu.org/licenses/gpl.html
+  
+	IceTheme - http://wwww.icetheme.com
+  
+---------------------------------------------------------------- */
+
+@media (max-width: 979px) {
+.icemegamenu > ul { 
+	background:#B159DE; }
+
+.icemegamenu > ul > li,
+.icemegamenu > ul > li.active,
+.icemegamenu > ul > li:hover {
+	background:#B159DE }
+  
+  
+#icemegamenu > li > ul.icesubMenu {
+	background:#BB6EE2}
+			
+}
+		

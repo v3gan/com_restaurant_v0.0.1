@@ -1,0 +1,1111 @@
+/* -------------------------------------------------------------
+
+  
+
+  Copyright (C) 2008 - 2012 IceTheme. All Rights Reserved
+
+    
+
+  http://www.gnu.org/licenses/gpl.html
+
+  
+
+  IceTheme - http://wwww.icetheme.com
+
+  
+
+---------------------------------------------------------------- */
+
+
+
+
+
+/* Bootstrap Reset */
+
+body {
+
+  background:#e5e5e5;
+
+  line-height:26px;}
+
+  
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-weight: normal;}  
+
+  
+
+p {
+
+  margin-bottom:18px}
+
+
+
+hr {
+
+  border:none;
+
+  border-top:1px solid #fff;
+
+  box-shadow:0 -1px 0 #ccc;}
+
+
+
+/*  mab custom 
+
+-----------------------------------------------------*/
+
+
+
+@media (min-width: 979px) {
+
+  .lg
+
+  {
+
+    background-color: rgb(160, 205, 24);
+
+  }
+
+}
+
+/*iceMenu_104:survey; iceMenu_132:example-survey;*/
+
+.hidden, #iceMenu_132
+
+{
+
+  display:none;
+
+}
+
+
+
+.finger-me li
+
+{
+
+  padding:1em inherit;
+
+}
+
+
+
+.restaurant-name
+
+{
+
+  font-weight:bold;
+  
+  background-image:url("images/custom/vegan_friendly_logo_only_transparent_small_disabled.png");
+
+  background-repeat:no-repeat;
+
+  background-position:left top;
+
+  padding-left:30px;
+
+}
+
+
+
+.display-logo
+
+{
+
+  background-image:url("images/custom/vegan_friendly_logo_only_transparent_small.png");
+
+  background-repeat:no-repeat;
+
+  background-position:left top;
+
+  padding-left:30px;
+
+}
+
+
+img.legend
+{
+
+  vertical-align:middle;
+
+  margin:0 .5em 1px 0;
+
+}
+
+  
+
+.bottom-dotted
+
+  {
+
+    border-bottom:1px dotted black;
+
+  }
+
+
+
+.ul-section-head
+
+{
+
+  font-weight:bold;
+
+  border-bottom: 1px solid black;
+
+}
+
+.ul-sub-section-head
+
+{
+
+  font-style:italic;
+
+  border-bottom: 1px solid black;
+
+}
+
+
+
+.neighborhood, .question, .veganism, .vfa, .online
+
+{
+
+  font-weight: bold; 
+
+  font-size:18px;
+
+}
+
+a.online
+
+  {
+
+    color:#FFFFFF;
+
+  }
+
+ a.online:link, a.online:visited, a.online:active
+
+{
+
+  text-decoration:none;
+
+}
+
+
+
+a.online:hover
+
+  {
+
+    color:#CDFF37;
+
+    text-decoration:none;
+
+  }
+
+
+
+a.neighborhood
+
+  {
+
+    color:#000000;
+
+  }
+
+ a.neighborhood:link, a.neighborhood:visited, a.neighborhood:active
+
+{
+
+  text-decoration:none;
+
+}
+
+
+
+a.neighborhood:hover
+
+  {
+
+    color:#CDFF37;
+
+    text-decoration:none;
+
+  }
+
+
+
+a.question
+
+  {
+
+  	background-color: #220D81;
+
+    color:#FFFFFF;
+
+  }
+
+ a.question:link, a.question:visited, a.question:active
+
+{
+
+  text-decoration:none;
+
+}
+
+
+
+a.question:hover
+
+  {
+
+    color:#CDFF37;
+
+    text-decoration:none;
+
+  }
+
+a.veganism
+
+  {
+
+  	background-color: #007400;
+
+    color:#FFFFFF;
+
+  }
+
+ a.veganism:link, a.veganism:visited, a.veganism:active
+
+{
+
+  text-decoration:none;
+
+}
+
+
+
+a.veganism:hover
+
+  {
+
+    color:#CDFF37;
+
+    text-decoration:none;
+
+  }
+
+a.vfa
+
+  {
+
+  	background-color: #412006;
+
+    color:#FFFFFF;
+
+  }
+
+ a.vfa:link, a.vfa:visited, a.vfa:active
+
+{
+
+  text-decoration:none;
+
+}
+
+
+
+a.vfa:hover
+
+  {
+
+    color:#CDFF37;
+
+    text-decoration:none;
+
+  }
+
+
+
+
+
+.carousel-indicators {
+
+  list-style:none;
+
+  margin:0;
+
+  position:absolute;
+
+  right:15px;
+
+  top:15px;
+
+  z-index:5;
+
+}
+
+
+
+.carousel-control {
+
+  top: 50%;
+
+}
+
+
+
+/*  mab custom
+
+-----------------------------------------------------*/
+
+
+
+/* Layout */
+
+.container {}
+
+  
+
+
+
+/* Header */
+
+#header {
+
+  background:#5990DE;
+
+  height:45px;
+
+  margin:60px 0;}
+
+  
+
+  #header .container {
+
+    position:relative}
+
+    
+
+  #logo {
+
+    float:left;
+
+    background:#e5e5e5;
+
+    display:inline-block;
+
+    padding:0 20px;
+
+    font-size:18px;
+
+  margin-top:-50px;}
+
+    
+
+    #logo p { margin-bottom:0}
+
+    
+
+
+
+  /* Main Navigation */
+
+
+
+
+
+
+
+
+
+/* IceSlideShow */
+
+#iceslideshow {
+
+  margin-bottom:30px}
+
+  
+
+
+
+/* Promo */
+
+#promo {}
+
+    
+
+  
+
+/* Content */
+
+#main {
+
+  clear:both}
+
+  
+
+  
+
+#content {}
+
+
+
+
+
+  /* Colums */
+
+  #columns {
+
+    padding-top:5px;}
+
+    
+
+    #columns #middle-col {
+
+      min-height:0px} 
+
+    
+
+      
+
+  #columns .moduletable,
+
+  #columns .moduletablestyle1,
+
+  #columns .moduletablestyle2 {
+
+    background:#44B5DA;
+
+    color:#fff;
+
+    padding:10px;
+
+    margin-bottom:20px;}
+
+    
+
+    #columns .moduletable h3,
+
+    #columns .moduletablestyle1 h3,
+
+    #columns .moduletablestyle2 h3 {
+
+      background:rgba(255,255,255,.15);
+
+      border-bottom:1px solid rgba(255,255,255,.15);
+
+      margin:-10px -10px 10px;
+
+      padding:3px 10px 0;
+
+      color:#fff;}
+
+  
+
+  
+
+    #columns .moduletablestyle1 {
+
+      background:#5990DE;}
+
+      #columns .moduletablestyle1 h3 {}
+
+    
+
+    
+
+    #columns .moduletablestyle2 {
+
+      background:#FCA165;}
+
+      #columns .moduletablestyle2 h3 {}
+
+        
+
+        
+
+
+
+      
+
+  
+
+/* Testimonial */
+
+.moduletabletestimonial {
+
+  text-align:center;
+
+  border-left:1px solid #fff;
+
+  box-shadow:-1px 0 0 #ccc;}
+
+
+
+  .moduletabletestimonial blockquote {
+
+    border:none;
+
+    text-align:left;
+
+    position:relative;
+
+    font-size:16px;
+
+    line-height: 32px;
+
+    margin-bottom:35px;
+
+    font-family:"Coming Soon", Courier, monospace; }
+
+    
+
+    .moduletabletestimonial blockquote:before,
+
+    .moduletabletestimonial blockquote:after {
+
+        position:absolute; 
+
+        font-weight: bold;
+
+        font-size:120px;
+
+        color:#ccc;
+
+        color:rgba(0,0,0,.05);
+
+        z-index:-6;
+
+        font-family:Georgia, "Times New Roman", Times, serif}
+
+     
+
+      .moduletabletestimonial blockquote:before {
+
+         content: open-quote;
+
+         top:25px;
+
+         left:0; }
+
+       
+
+      .moduletabletestimonial blockquote:after { 
+
+         content: close-quote;
+
+         right:0;
+
+         bottom:-25px}
+
+
+
+
+
+.moduletabletestimonial p.author {
+
+  font-size:20px;
+
+  margin-bottom: 2px;
+
+  padding-top: 6px;
+
+  color:#333}
+
+
+
+.moduletabletestimonial p.position {
+
+  color:#888;}
+
+
+
+
+
+/* IceCarousel */
+
+#icecarousel {
+
+  clear:both}
+
+    
+
+  
+
+  
+
+/* marketing */
+
+#marketing {
+
+  background-color:#44B5DA;
+
+  background: -webkit-linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+
+  background: -moz-linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+
+  background: -o-linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+
+  background: linear-gradient(left, #6EC5E2, #44B5DA 25%, #44B5DA , #44B5DA 75%, #6EC5E2);
+
+  color:#fff;
+
+  padding:10px 0;
+
+  margin:35px 0 0;
+
+  text-align:center;}
+
+  
+
+  #marketing_inside {
+
+    background-image: url(../images/marketing_border.png), url(../images/marketing_border.png);
+
+    background-position: center top, center bottom;
+
+    background-repeat: repeat-x;
+
+    padding:30px 0 20px;}
+
+    
+
+  
+
+  #marketing .container{
+
+    background-image: url(../images/star.png), url(../images/star.png);
+
+    background-position: 0 35%, 100% 35%;
+
+    background-repeat: no-repeat;}
+
+  
+
+  #marketing h2 {
+
+    color:#fff;
+
+    text-shadow:1px 1px 1px rgba(0,0,0,.25);
+
+    margin-bottom:20px;}
+
+    
+
+  #marketing .btn {
+
+    color:#fff;
+
+    border:none;
+
+    background:#2190c4;
+
+    text-shadow: none;
+
+    padding:10px 20px;
+
+    box-shadow:none;
+
+    -webkit-transition:all .2s ease-out;
+
+    -moz-transition:all .2s ease-out;
+
+    -o-transition:all .2s ease-out; 
+
+    transition:all .2s ease-out;}
+
+    
+
+    #marketing .btn:hover {
+
+      border:none;
+
+      box-shadow:none;
+
+      background:#83ACE7;}
+
+
+
+
+
+
+
+/* Footer */
+
+#footer {
+
+  padding:35px 0 5px; }
+
+
+
+  
+
+  /* Copyright */
+
+  #copyright_area {
+
+    font-size:.9em;
+
+    line-height:75px;}
+
+    
+
+  
+
+  /* IceTheme Copyright Logo */
+
+  #footer p#icelogo {
+
+    float:left;
+
+    line-height:55px;
+
+    margin:0;
+
+    padding-right:30px;}
+
+      
+
+      #footer p#icelogo a {
+
+        opacity:.5;
+
+        -webkit-transition:all .2s ease-out;
+
+        -moz-transition:all .2s ease-out;
+
+        -o-transition:all .2s ease-out; 
+
+        transition:all .2s ease-out;}
+
+        #footer p#icelogo a:hover {
+
+          opacity:1}
+
+        
+
+  
+
+  
+
+  /* Copyright Text */
+
+  #footer p#copyright {
+
+    float:left;
+
+    color:#777;
+
+    margin:0;
+
+    padding-right:20px;}
+
+    
+
+  
+
+  /* Copyright Nav */  
+
+  #copyrightmenu {
+
+    float:left;}
+
+    
+
+    #copyrightmenu ul {
+
+      list-style-type:none;
+
+      margin:0;
+
+      padding:0}
+
+      
+
+      #copyrightmenu ul li {
+
+        display:inline;}
+
+        
+
+        #copyrightmenu ul li a {
+
+          color:#777;
+
+          display:inline;
+
+          padding-right:20px;}
+
+          #copyrightmenu ul li a:hover {
+
+            background:none;
+
+            color:#111;
+
+            text-decoration:underline}
+
+    
+
+
+
+
+
+    /* Go to Top link */
+
+    .scrollup {
+
+      width: 40px;
+
+      height: 40px;
+
+      text-indent: -9999px;
+
+      opacity: 0.3;
+
+      position: fixed;
+
+      bottom: 50px;
+
+      right: 30px;
+
+      display: none;
+
+      background: url(../images/icon_top.png) no-repeat;
+
+      -webkit-transition:all .2s ease-out;
+
+      -moz-transition:all .2s ease-out;
+
+      -o-transition:all .2s ease-out; 
+
+      transition:all .2s ease-out;}
+
+      
+
+      .scrollup:hover {
+
+        opacity: 0.6;}
+
+
+
+
+
+
+
+    
+
+
+
+/* Navigation */
+
+.icemegamenu {
+
+  float:left}
+
+
+
+
+
+
+
+/* IceCarousel */
+
+.icecarousel {
+
+  margin-bottom:35px;}
+
+  
+
+  .icecarousel .carousel-control {
+
+    opacity:0;
+
+    top: 44%;
+
+    -webkit-transition:all .2s ease-out;
+
+    -moz-transition:all .2s ease-out;
+
+    -o-transition:all .2s ease-out; 
+
+    transition:all .2s ease-out;} 
+
+    
+
+    .icecarousel:hover .carousel-control {
+
+      opacity:.6;} 
+
+      
+
+      .icecarousel:hover .carousel-control:hover {
+
+        opacity:1}
+
+
+
+  
+
+  
+
+    .icecarousel .carousel-caption {
+
+      opacity:0;
+
+      margin-bottom:-45px;
+
+      -webkit-transition:all .2s ease-out;
+
+      -moz-transition:all .2s ease-out;
+
+      -o-transition:all .2s ease-out; 
+
+      transition:all .2s ease-out;}
+
+        
+
+      .icecarousel:hover .carousel-caption {
+
+        opacity:1;
+
+        margin-bottom:0}
+
+      
+
+    .icecarousel .carousel-caption h4 {
+
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+      margin: 0 0 2px;}
+
+
+
+  
+
+  
+
+/* Social */
+
+#ice_social {
+
+  float:right;
+
+  padding:5px 0 0}
+
+  
+
+  #ice_social #social_fb {
+
+    float:right}
+
+  
+
+  #ice_social #social_tw {
+
+    float:right}      
+
+      
+
+      
+
+      
+
+/* Error Page 
+
+---------------------------------------------------------------- */
+
+body.error_page {}
+
+  
+
+  body.error_page #logo {
+
+    margin:20px -1px 0 0;
+
+    text-align:center;
+
+    padding:20px 0;}
+
+
+
+  body.error_page #content {
+
+    border-left: 1px solid #fff;
+
+    box-shadow: -1px 0 0 #ccc;
+
+    margin:30px 0 0 -30px;
+
+    padding-left:30px;}
+
+    
+
+    body.error_page .page-header {
+
+      margin:17px 0 15px;
+
+      border:none;}
+
+    
+
+    
+
+      
+
+/* Offline Page 
+
+---------------------------------------------------------------- */    
+
+body.offline_page {}
+
+  
+
+  body.offline_page #logo {
+
+    float:none;
+
+    margin:40px 0 25px;
+
+    text-align:center;
+
+    padding:0;}
+
+
+
+  body.offline_page #content {
+
+    text-align:center;
+
+    margin:0 auto;}
+
+    
+
+    
+
+    body.offline_page #content_inside {
+
+      width:520px;
+
+      padding:20px;
+
+      border:1px solid #dcdcdc;
+
+      margin:0 auto;
+
+      background:#fff;
+
+      text-align:left}
+
+      
+
+      body.offline_page #content_inside p.alert {
+
+        margin-bottom:35px;}
+
+    
