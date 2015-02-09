@@ -48,8 +48,8 @@ class RestaurantHelper
                 JText::_('com_restaurant')),'restaurants-categories');
         }
         
-        JHtmlSidebar::addEntry(JText::_('COM_FOLIO_SUBMENU_PREVIEW'),
-            'index.php?option=com_folio&view=preview',$vName=='preview');
+        JHtmlSidebar::addEntry(JText::_('COM_RESTAURANT_SUBMENU_PREVIEW'),
+            'index.php?option=com_restaurant&view=preview',$vName=='preview');
     }
     
 }

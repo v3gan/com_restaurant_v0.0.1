@@ -1,12 +1,12 @@
 <?php
 defined('_JEXEC') or die;
-class FolioViewPreview extends JViewLegacy
+class RestaurantViewPreview extends JViewLegacy
 {
     protected $items;
     
     public function display($tpl=null)
     {
-        $this->item = $this->get('Items');
+        $this->items = $this->get('Items');
         RestaurantHelper::addSubmenu('preview');
         
         if (count($errors = $this->get('Errors'))) {
