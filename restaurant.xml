@@ -30,11 +30,15 @@
     <files folder="site">
         <filename>index.html</filename>
     </files>
+    <folder>css</folder>
+    <folder>js</folder>
+    <!--
     <media destination="com_restaurant" folder="media">
         <filename>index.html</filename>
         <folder>css</folder>
         <folder>js</folder>
     </media>
+    -->
     <administration>
         <menu img="class:categories">COM_RESTAURANT_MENU</menu>
         <files folder="admin">
