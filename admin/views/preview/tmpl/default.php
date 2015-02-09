@@ -44,7 +44,7 @@ function format_phone($phone) {
                                     <a class="accordion-toggle neighborhood-<?php echo $item->hex_text ?>" 
                                         style="background-color: #<?php echo $item->hex_background ?>;" 
                                         href="#collapse<?php echo $item->hex_background ?>" data-toggle="collapse" 
-                                        data-parent="#neighborhoods-acc"> <?php echo $item->neighborhood ?> </a>
+                                        data-parent="#neighborhoods-acc"> <?php echo $item->name ?> </a>
                                 </div>
                                 <div id="collapse<?php echo $item->hex_background ?>" class="accordion-body collapse">
                                     <div class="accordion-inner">

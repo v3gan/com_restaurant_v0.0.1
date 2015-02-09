@@ -80,7 +80,7 @@ class RestaurantModelPreview extends JModelList
             $this->getState(
                 'list.select',
                 'r.id, r.restaurant,r.hex_background,r.hex_text,'.
-                'r.pub_state,n.name,r.address1,'.
+                'r.pub_state,n.name,r.address1,r.neighborhood_id'.
                 'r.address2,r.city,r.state,r.zip,r.phone,'.                
                 'r.fax,r.display_logo,r.website,r.blurb,'.
                 'r.publish_up,r.publish_down,r.ordering'
