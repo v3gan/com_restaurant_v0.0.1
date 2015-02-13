@@ -1,6 +1,9 @@
 <?php
 defined('_JEXEC') or die ;
 
+JHtml::stylesheet('com_restaurant/site.style.css', array(), true);
+JHtml::script(JUri::base() . 'media/js/default.js', true);
+
 function format_phone($phone) {
     preg_match('/^(\d{3})(\d{3})(\d{4})$/', $phone, $matches);
     $result = $matches[1] . '.' . $matches[2] . '.' . $matches[3];

@@ -14,11 +14,11 @@ if (!JFactory::getUser()->authorise('core.manage', 'com_restaurant'))
 /*
  * get the stylesheet for the component
  */
-$document = JFactory::getDocument();
-$cssFile = "./media/com_restaurant/css/site.stylesheet.css";
-$document->addStylesheet($cssFile);
-$jsFile = "./media/com_restaurant/js/default.js";
-$document->addScript($jsFile);
+// $document = JFactory::getDocument();
+// $cssFile = "./media/com_restaurant/css/site.stylesheet.css";
+// $document->addStylesheet($cssFile);
+// $jsFile = "./media/com_restaurant/js/default.js";
+// $document->addScript($jsFile);
 
 //  Get an instance of the controller prefixed by Restaurant
 //  the arguement to JControllerLegacy::getInstance is the name of the component
