@@ -58,7 +58,11 @@ class RestaurantModelPreview extends JModelList
     }
     
 
-
+    protected function populateState($ordering=null, $direction = null)
+    {
+        $this->setState('list.limit', 0);
+    }
+    
     /**
     * Method to get a JDatabaseQuery object for retrieving the data set from a database.
     *

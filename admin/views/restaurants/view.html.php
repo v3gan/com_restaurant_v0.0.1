@@ -23,7 +23,7 @@ class RestaurantViewrestaurants extends JViewLegacy
      */    
     protected $state;
     /*
-     * Method to get a JPagination object for the data set.
+     * variable to get a JPagination object for the data set.
      */
     protected $pagination;
     
@@ -43,8 +43,6 @@ class RestaurantViewrestaurants extends JViewLegacy
          * calls JModelLegacy.getState() (inherited by JModelList with no override)
          */
         $this->state = $this->get('State');
-        
-        $this->pagination = $this->get('Pagination');
         
         RestaurantHelper::addSubmenu('restaurants');
         

@@ -4,8 +4,9 @@ class RestaurantViewPreview extends JViewLegacy
 {
     protected $items;
     
+    
     public function display($tpl=null)
-    {
+    {   
         $this->items = $this->get('Items');
         RestaurantHelper::addSubmenu('preview');
         
