@@ -33,6 +33,10 @@ class RestaurantViewrestaurants extends JViewLegacy
 	public function display($tpl = null)
 	{
 	    /*
+         * get the pagination object
+         */    
+	    $this->pagination = $this->get('Pagination');
+	    /*
          * get the array of data from the model for the tpl
          * calls JModelList.getItems
          */
