@@ -39,6 +39,18 @@
     </media>
     <administration>
         <menu img="class:categories">COM_RESTAURANT_MENU</menu>
+        <submenu>
+            <menu link="option=com_restaurant" view="restaurants" img="class:generic" alt="Restaurant/Restaurants">
+                com_restaurant_restaurants
+            </menu>
+            <menu link="option=com_categories&amp;extension=com_restaurant" view="categories" 
+                img="class:categories" alt="Restaurant/Categories">
+                    com_restaurant_categories
+            </menu>
+            <menu link="option=com_restaurant&amp;view=preview" img="class:generic" alt="Restaurant/Preview">
+                com_restaurant_preview
+            </menu>
+        </submenu>
         <files folder="admin">
             <filename>index.html</filename>
             <filename>access.xml</filename>
