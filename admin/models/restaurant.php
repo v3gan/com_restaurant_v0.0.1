@@ -7,7 +7,32 @@ class RestaurantModelRestaurant extends JModelAdmin
      * prefix used in controller messages (component name in this case)
      */
     protected $text_prefix = 'COM_RESTAURANT';
+    
+    protected function canDelete($record) {
+        if (!empty($record -> id)) {
+            if ($record -> state != -2) {
+                return;
+            }
+            $user = JFactory::getUser();
 
+            if ($record -> catid) {
+                return $user -> authorise('core.delete', 'com_restaurant.category.' . (int)$record -> catid);
+            } else {
+                return parent::canDelete($record);
+            }
+        }
+    }
+
+    protected function canEditState($record) {
+        $user = JFactory::getUser();
+
+        if (!empty($record -> catid)) {
+            return $user -> authorise('core.edit.state', 'com_restaurant.category.' . (int)$record -> catid);
+        } else {
+            return parent::canEditState($record);
+        }
+    }
+    
     /**
      * Returns a reference to the a Table object, always creating it.
      * used to read and write to the database
