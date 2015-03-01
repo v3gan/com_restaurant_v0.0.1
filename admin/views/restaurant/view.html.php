@@ -54,16 +54,28 @@ class RestaurantViewRestaurant extends JViewLegacy
         /*
          * title at the top of the page
          */
-		JToolbarHelper::title(JText::_('COM_RESTAURANT_MANAGER_RESTAURANT'), '');
-
-        /*
-         * save button
-         */
-		JToolbarHelper::save('restaurant.save');
 		
-        /*
-         * shows cancel if record is new or close if editing
-         */
+        $user       = JFactory::getUser();
+        $userId     = $user->get('id');
+        $isNew      = ($this->item->restaurant_location_id == 0);
+        $canDo      = RestaurantHelper::getActions($this->item->catid, 0);
+        
+        JToolbarHelper::title(JText::_('COM_RESTAURANT_MANAGER_RESTAURANT'), '');
+        
+        if ($canDo->get('core.edit')||(count($user->getAuthorisedCategories('com_restaurant', 'core.create'))))
+        {
+            JToolbarHelper::apply('restaurant.apply');
+            JToolbarHelper::save('restaurant.save');
+        }
+        if (count($user->getAuthorisedCategories('com_restaurant', 'core.create'))){
+            JToolbarHelper::save2new('restaurant.save2new');
+        }
+        // If an existing item, can save to a copy.
+        if (!$isNew && (count($user->getAuthorisedCategories('com_restaurant', 'core.create')) > 0))
+        {
+            JToolbarHelper::save2copy('restaurant.save2copy');
+        }
+
 		if (empty($this->item->id))
 		{
 			JToolbarHelper::cancel('restaurant.cancel');

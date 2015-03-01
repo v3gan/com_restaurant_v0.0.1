@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 $user = JFactory::getUser();
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
-$canOrder   = $user->authorise('core.edit.state','com_restaurant');
+$canOrder   = $user->authorise('core.edit.state','com_restaurant.category');
 $saveOrder  = $listOrder == 'r.ordering';
 if ($saveOrder)
 {
@@ -167,6 +167,7 @@ $sortFields = $this->getSortFields();
                     || $item->$checked_out == 0;
                 $canChange = $user->authorise('core.edit.state', 'com_restaurant')
                     && $canCheckin;
+                $canEdit    = $user->authorise('core.edit',       'com_restaurant.category.' . $item->catid);
                  ?>
 				<tr class="row<?php echo $i % 2; ?>" sortable-group-id="1">
 				    <!-- this is the ordering row, the code is standard -->
@@ -199,9 +200,13 @@ $sortFields = $this->getSortFields();
 					    <?php echo JHtml::_('jgrid.published',$item->pub_state,$i,'restaurants.',$canChange,'cb',$item->publish_up,$item->publish_down); ?>					   
 					</td>
 					<td class="nowrap has-context">
+					    <?php if ($canEdit) : ?>
 						<a href="<?php echo JRoute::_('index.php?option=com_restaurant&task=restaurant.edit&id='.(int) $item->id); ?>">
 							<?php echo $this->escape($item->restaurant); ?>
 						</a>
+						<?php else : ?>
+                            <?php echo $this->escape($item->neighborhood); ?>
+                        <?php endif; ?>
 					</td>
                     <td class="center hidden-phone">
                         <?php echo $this->escape($item->name); ?>

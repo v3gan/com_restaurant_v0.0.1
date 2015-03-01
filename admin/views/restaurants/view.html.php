@@ -83,27 +83,23 @@ class RestaurantViewrestaurants extends JViewLegacy
          * check current user permissions (via the RestaruantHelper class in 
          * admin/helpers/restaurant.php) to determine which buttons to display
          */
-		$canDo	= RestaurantHelper::getActions();
+        $state  = $this->get('State');
 
-		/*
-         * set up toolbar so that buttons can be added
-         */
-		$bar = JToolBar::getInstance('toolbar');
-        
-        $state = $this->get('State');
-        
-        /*
-         * title is the text shown at the top of the view
-         * uses JText() to display a language string
-         */
-		JToolbarHelper::title(JText::_('COM_RESTAURANT_MANAGER_RESTAURANTS'), '');
-        
-        /*
-         * create a 'New' button
-         * ?? in this case we are adding a new record to the 'restaurant' form
-         */
-		JToolbarHelper::addNew('restaurant.add');
-        
+        $canDo  = RestaurantHelper::getActions($state->get('filter.category_id'));
+
+        $user   = JFactory::getUser();
+        $bar = JToolBar::getInstance('toolbar');
+
+        JToolbarHelper::title(JText::_('COM_RESTAURANT_MANAGER_RESTAURANTS'), '');
+
+        if (count($user->getAuthorisedCategories('com_restaurant', 'core.create')) > 0)
+        {
+            /*
+             * create a 'New' button
+             * ?? in this case we are adding a new record to the 'restaurant' form
+             */
+    		JToolbarHelper::addNew('restaurant.add');
+        }
         /*
          * edit button is used in conjunction with the checkbox next to
          * each row of data (user selects row and clicks edit)

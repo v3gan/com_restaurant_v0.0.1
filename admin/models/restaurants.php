@@ -48,6 +48,9 @@ class RestaurantModelRestaurants extends JModelList
 				,'r.publish_down'
 				,'ordering'
 				,'r.ordering'
+				,'catid'
+				,'r.catid'
+				,'category_title'
 			);
 		}
 		parent::__construct($config);
@@ -90,7 +93,7 @@ class RestaurantModelRestaurants extends JModelList
 		$query->select(
 			$this->getState(
 				'list.select',
-				'r.id, r.restaurant,'.
+				'r.id, r.restaurant, r.catid '.
 				'r.pub_state,n.name,r.address1,'.
                 'r.address2,r.city,r.state,r.zip,r.phone,'.                
                 'r.fax,r.display_logo,r.website,r.blurb,'.
@@ -113,6 +116,10 @@ class RestaurantModelRestaurants extends JModelList
             $query->where('(r.pub_state IN (0,1))');
         }
         
+        // join over categories
+        $query->select('c.title AS category_title');
+        $query->join('LEFT', '#__categories AS c ON c.id = r.catid');
+        
         //  filter by search in restaurant
         $search = $this->getState('filter.search');
         if (!empty($search)) {            
@@ -127,7 +134,12 @@ class RestaurantModelRestaurants extends JModelList
          * get the order and direction from the model state
          */
         $orderCol = $this->state->get('list.ordering');
-        $orderDirn = $this->state->get('list.direction');   
+        $orderDirn = $this->state->get('list.direction');
+        
+        if ($orderCol == 'r.ordering')
+        {
+            $orderCol = 'r.neighborhood '.$orderDirn.', r.ordering';
+        }   
         
         $query->order($db->escape($orderCol.' '.$orderDirn));                                                                                                          
 

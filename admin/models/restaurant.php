@@ -8,6 +8,10 @@ class RestaurantModelRestaurant extends JModelAdmin
      */
     protected $text_prefix = 'COM_RESTAURANT';
     
+     /*
+     * the two functions below are related to category permissions and
+     * may not be all that useful if we are not using categories
+     */
     protected function canDelete($record) {
         if (!empty($record -> id)) {
             if ($record -> state != -2) {
