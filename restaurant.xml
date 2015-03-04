@@ -29,6 +29,12 @@
     </update>
     <files folder="site">
         <filename>index.html</filename>
+        <filename>controller.php</filename>
+        <filename>restaurant.php</filename>
+        <folder>controllers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
     </files>
     <folder>css</folder>
     <folder>js</folder>
