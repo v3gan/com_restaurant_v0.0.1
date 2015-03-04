@@ -19,7 +19,7 @@ class RestaurantControllerRestaurant extends JControllerForm
         
         if($categoryId){
             // if the category has been passed in the URL check it
-            $allow = $user->authorise('core.create',$this->option . ' . category . ' . $categoryId)
+            $allow = $user->authorise('core.create',$this->option . ' . category . ' . $categoryId);
         }
         
         if($allow === null){
@@ -42,7 +42,7 @@ class RestaurantControllerRestaurant extends JControllerForm
         }
         if($categoryId){
             // the cat id has been set. Check the cat permissions
-            return JFactory::getUser()->authorise('core.edit',$this->option . ' . category . ' $categoryId)
+            return JFactory::getUser()->authorise('core.edit',$this->option . ' . category . '. $categoryId);
         }else {
             // since there is no asset tracking, revert to component permissions
             return parent::allowEdit($data,$key);

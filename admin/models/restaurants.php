@@ -93,7 +93,7 @@ class RestaurantModelRestaurants extends JModelList
 		$query->select(
 			$this->getState(
 				'list.select',
-				'r.id, r.restaurant, r.catid '.
+				'r.id, r.restaurant, r.catid, '.
 				'r.pub_state,n.name,r.address1,'.
                 'r.address2,r.city,r.state,r.zip,r.phone,'.                
                 'r.fax,r.display_logo,r.website,r.blurb,'.
