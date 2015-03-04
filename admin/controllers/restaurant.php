@@ -19,7 +19,7 @@ class RestaurantControllerRestaurant extends JControllerForm
         
         if($categoryId){
             // if the category has been passed in the URL check it
-            $allow = $user->authorise('core.create',$this->option . ' . category . ' $categoryId)
+            $allow = $user->authorise('core.create',$this->option . ' . category . ' . $categoryId)
         }
         
         if($allow === null){
