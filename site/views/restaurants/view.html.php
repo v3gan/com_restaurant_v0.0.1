@@ -8,7 +8,7 @@ class RestaurantViewRestaurants extends JViewLegacy {
 	
     protected $items;
 	public function display($tpl = null) {
-		$this->items = $get('Items');
+		$this->items = $this->get('Items');
         if(count($errors = $this->get('Errors')))
         {
             JError::raiseError(500, implode("/n",$errors));
