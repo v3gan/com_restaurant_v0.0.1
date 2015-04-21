@@ -54,6 +54,11 @@ class RestaurantModelRestaurants extends JModelList {
         parent::__construct($config);
 	}
     
+    protected function populateState($ordering=null, $direction = null)
+    {
+        $this->setState('list.limit', 0);
+    }
+    
     protected function getListQuery()
     {
         $db     = $this->getDbo();
