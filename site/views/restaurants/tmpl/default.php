@@ -2,6 +2,7 @@
 defined('_JEXEC') or die ;
 
 JHtml::stylesheet('com_restaurant/site.style.css', array(), true);
+JHtml::_('jquery.framework', true, true);
 JHtml::script('com_restaurant/default.js', true, true);
 //JHtml::script(JUri::base() . 'media/com_restaurant/js/default.js', true);
 
@@ -14,7 +15,7 @@ function format_phone($phone) {
     <div id="j-main-container">
         <div class="clearfix"> </div>
         <div class="mypreview">
-            <div class="restaurants<?php echo $moduleclass_sfx ?>">
+            <div class="restaurants">
                 <div style="margin-bottom:.5em;">
                     <button id="btnHideShow" type="button" class="btn btn-success">&nbsp;</button>
                 </div>
@@ -72,6 +73,4 @@ function format_phone($phone) {
                 </div>
             </div>
         </div>
-
     </div>
-</form>
