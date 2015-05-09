@@ -92,14 +92,14 @@ class RestaurantViewrestaurants extends JViewLegacy
 
         JToolbarHelper::title(JText::_('COM_RESTAURANT_MANAGER_RESTAURANTS'), '');
 
-        if (count($user->getAuthorisedCategories('com_restaurant', 'core.create')) > 0)
-        {
+        //if (count($user->getAuthorisedCategories('com_restaurant', 'core.create')) > 0)
+        //{
             /*
              * create a 'New' button
              * ?? in this case we are adding a new record to the 'restaurant' form
              */
     		JToolbarHelper::addNew('restaurant.add');
-        }
+        //}
         /*
          * edit button is used in conjunction with the checkbox next to
          * each row of data (user selects row and clicks edit)
