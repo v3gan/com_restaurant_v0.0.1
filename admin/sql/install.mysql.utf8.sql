@@ -52,19 +52,25 @@ CREATE TABLE IF NOT EXISTS `#__rl_contact_role_location` (
 --
 
 CREATE TABLE IF NOT EXISTS `#__rl_location` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `neighborhood_id` int(11) unsigned DEFAULT NULL,
-  `address1` varchar(1000) DEFAULT NULL,
-  `address2` varchar(1000) DEFAULT NULL,
-  `city` varchar(1000) DEFAULT NULL,
-  `state` char(2) DEFAULT NULL,
-  `zip` varchar(10) DEFAULT NULL,
-  `display_logo` tinyint(1) NOT NULL DEFAULT '0',
-  `publish` tinyint(1) NOT NULL DEFAULT '0',
-  `website` varchar(1000) DEFAULT NULL,
-  `phone` char(10) DEFAULT NULL,
-  `fax` char(10) DEFAULT NULL,
-  `blurb` mediumtext,
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`neighborhood_id` int(11) unsigned DEFAULT NULL,
+	`address1` varchar(1000) DEFAULT NULL,
+	`address2` varchar(1000) DEFAULT NULL,
+	`city` varchar(1000) DEFAULT NULL,
+	`state` char(2) DEFAULT NULL,
+	`zip` varchar(10) DEFAULT NULL,
+	`display_logo` tinyint(1) NOT NULL DEFAULT '0',
+	`publish` tinyint(1) NOT NULL DEFAULT '0',
+	`website` varchar(1000) DEFAULT NULL,
+	`phone` char(10) DEFAULT NULL,
+	`fax` char(10) DEFAULT NULL,
+	`blurb` mediumtext
+	,`has_veg_brunch` tinyint(1) NOT NULL default 0
+	,`has_table_svc` tinyint(1) NOT NULL default 0
+	,`has_alcohol` tinyint(1) NOT NULL default 0
+	,`is_byob` tinyint(1) NOT NULL default 0
+	,`can_sit_outside` tinyint(1) NOT NULL default 0
+  
   PRIMARY KEY (`id`),
   KEY `neighborhood_id` (`neighborhood_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
@@ -436,6 +442,11 @@ CREATE TABLE IF NOT EXISTS `#__rl_disp_restaurant_list` (
 ,`publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ,`publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ,`alias` varchar(255) NOT NULL DEFAULT ''
+,`has_veg_brunch` tinyint(1) NOT NULL default 0
+,`has_table_svc` tinyint(1) NOT NULL default 0
+,`has_alcohol` tinyint(1) NOT NULL default 0
+,`is_byob` tinyint(1) NOT NULL default 0
+,`can_sit_outside` tinyint(1) NOT NULL default 0
 ,PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
